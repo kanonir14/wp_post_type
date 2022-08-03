@@ -1,0 +1,170 @@
+html, body{
+	height: 100vh;
+}
+#page {
+	display: flex;
+	flex-direction: column;
+	height: 100%;		
+}
+
+#content{
+	flex: 1 0 auto;
+	display: flex;
+	flex-direction: column;
+
+	.main-content-area {
+		flex-grow: 1;
+	}
+
+	.footer-area{
+		flex-shrink: 0;
+	}
+}
+
+// nav item
+
+li.add-post{
+	position: relative;
+	padding-left: 30px;
+
+	&:before{
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 50%;
+		width: 26px;
+		height: 26px;
+		-webkit-mask: url('./assets/img/add-icon.svg') no-repeat center center / contain;
+		mask: url('./assets/img/add-icon.svg') no-repeat center center / contain;
+		background-color: #fff;
+		transform: translateY(-50%);
+		transition: background-color 0.3s;
+	}
+
+	&:hover:before{
+		background-color: #DA4453;
+	}
+}
+
+li.active:before{
+	background-color: #DA4453;
+}
+
+// grid ads
+
+.ads-grid{
+	display: flex;
+	flex-wrap: wrap;
+	// gap: 40px;
+
+	h2{
+		font-size: 28px;
+		text-align: center;
+		line-height: 39px;
+		height: 78px;
+		overflow: hidden;
+		
+	}
+
+	.item{
+		width: 25%;
+		padding: 20px;
+
+		&:hover img{
+			transform: scale(1.1);
+		}
+	}
+
+	.item-img{
+		width: 100%;
+		overflow: hidden;
+
+		
+
+		img{
+			width: 100%;
+			aspect-ratio: 16 / 9;
+			object-fit: cover;
+			transition: transform .2s ease-out;
+		}
+	}
+
+}
+
+// add post
+
+.create-post{
+	width: 100%;
+
+	h1{
+		text-align: center;
+	}
+}
+
+.add-form{
+	width: 100%;
+	max-width: 800px;
+	margin: auto;
+
+	.form-control {
+		width: 100%;
+		height: auto;
+		margin-bottom: 20px;
+		background: transparent;
+		border: 0;
+		box-shadow:  0 0 0 0;
+	}
+
+	.form-btn{
+		text-align: center;
+	}
+
+	label{
+
+	}
+
+	input{
+		width: 100%;
+		height: auto;
+		padding: 15px !important;
+	}
+
+	input[type="file"] {
+		width: auto;
+	}
+
+}
+
+// loader
+
+
+
+.loader{
+	opacity: 0;
+	visibility: hidden;
+	display: inline-block;
+	position: relative;
+	top: 5px;
+	width: 26px;
+	height: 26px;
+	line-height: 50px;
+	-webkit-mask: url('../img/loader-icon.svg') no-repeat center center / contain; 
+	mask: url('../img/loader-icon.svg') no-repeat center center / contain; 
+	background-color: #337ab7;
+	animation: circle .5s linear infinite;
+
+	&--visible{
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+// 
+
+
+
+// animation
+@import "_animations.scss";
+//      MEDIA
+
+@import "_media.scss";

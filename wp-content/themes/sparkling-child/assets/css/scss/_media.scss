@@ -1,0 +1,34 @@
+
+
+@media screen and (max-width: 990px) {
+	.ads-grid {
+		.item{
+			width: 33%;
+		}
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.ads-grid {
+		.item{
+			width: 50%;
+		}
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.ads-grid {
+		.item{
+			width: 100%;
+		}
+	}
+
+	.fancybox-content{
+		padding: 40px 20px;
+		text-align: center;
+	}
+
+	button#send{
+		width: 100%;
+	}
+}
