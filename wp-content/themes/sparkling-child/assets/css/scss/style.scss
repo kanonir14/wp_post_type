@@ -23,19 +23,19 @@ html, body{
 
 // nav item
 
-li.add-post{
+#menu-header-nav .add-post{
 	position: relative;
 	padding-left: 30px;
 
 	&:before{
 		content: '';
 		position: absolute;
-		left: 0;
+		left: 0px;
 		top: 50%;
 		width: 26px;
 		height: 26px;
-		-webkit-mask: url('./assets/img/add-icon.svg') no-repeat center center / contain;
-		mask: url('./assets/img/add-icon.svg') no-repeat center center / contain;
+		-webkit-mask: url('../img/add-icon.svg') no-repeat center center / contain;
+		mask: url('../img/add-icon.svg') no-repeat center center / contain;
 		background-color: #fff;
 		transform: translateY(-50%);
 		transition: background-color 0.3s;
@@ -46,9 +46,14 @@ li.add-post{
 	}
 }
 
-li.active:before{
+#menu-header-nav a:hover{
+	color: #DA4453;
+}
+
+#menu-header-nav .active:before{
 	background-color: #DA4453;
 }
+
 
 // grid ads
 
