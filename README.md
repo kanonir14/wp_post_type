@@ -12,5 +12,5 @@ docker-compose up -d
 ````
 
 ````
-http://localhost/
+Example website: https://keduki.top/
 ````
